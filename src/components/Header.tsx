@@ -25,7 +25,6 @@ const Header = () => {
               aria-label="Toggle Theme"
               className="mr-6"
               onClick={() => {
-                console.log(theme);
                 setTheme(theme === "dark" ? "light" : "dark");
               }}
             >
