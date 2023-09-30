@@ -35,7 +35,7 @@ const Header = () => {
             <MenuButton />
             <div className="mx-6 hidden items-center space-x-4 md:block lg:space-x-6">
               <Button asChild variant="ghost">
-                <Link href="#">Buy me a Coffee</Link>
+                <Link href="https://www.buymeacoffee.com/reuelnixon">Buy me a Coffee</Link>
               </Button>
             </div>
           </div>
