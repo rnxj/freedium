@@ -18,7 +18,9 @@ const MenuButton = () => {
         <DropdownMenuLabel>More</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem className="cursor-pointer">
-          Buy Me a Coffee
+          <Button asChild variant="ghost">
+            <Link href="https://www.buymeacoffee.com/reuelnixon">Buy me a Coffee</Link>
+          </Button>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
