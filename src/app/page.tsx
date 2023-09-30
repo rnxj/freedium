@@ -45,7 +45,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="mx-auto py-24">
+      <div className="mx-auto py-8 md:py-24">
         <div className="grid grid-cols-1 gap-1 text-center lg:grid-cols-5">
           <div className="z-10 ml-5 hidden lg:col-span-1 lg:block">
             <LeftHand />
