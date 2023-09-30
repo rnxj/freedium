@@ -3,6 +3,7 @@
 import { LeftHand, RightHand } from "~/components/Hands";
 import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";
+import domainList from "~/lib/domains";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
@@ -19,9 +20,16 @@ import {
 } from "~/components/ui/form";
 
 const FormSchema = z.object({
-  url: z.string().min(2, {
-    message: "Please enter a valid URL",
-  }),
+  url: z.string().refine((url) => {
+    let inList = false;
+    for (const domain of domainList) {
+      if (url.match(domain)) {
+        inList = true;
+        break;
+      }
+    }
+    return inList;
+  }, "Please enter a valid domain thats using Medium's service"),
 });
 
 export default function Home() {
