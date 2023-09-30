@@ -29,7 +29,7 @@ const FormSchema = z.object({
       }
     }
     return inList;
-  }, "Please enter a valid domain thats using Medium's service"),
+  }, "Please enter a valid domain that's using Medium's service"),
 });
 
 export default function Home() {
