@@ -1,11 +1,9 @@
 "use client";
-import { useTheme } from "next-themes";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function BlogPage() {
   const searchParams = useSearchParams();
-  const { theme, setTheme } = useTheme();
   const url = searchParams.get("url");
   const [blogContent, setBlogContent] = useState("");
   const fetchBlog = async () => {
@@ -64,10 +62,16 @@ export default function BlogPage() {
       div.parentNode!.removeChild(div);
     });
 
+    // Remove div with class "sl sm sn so sp l bw", "ab ca", "ru rv rw rx ry rz sa sb gt ab q sc sd c", "l m n o c", "ab co jh ji jj jk jl jm jn jo jp jq jr js jt ju jv jw"
+    const divsWithClass = tempElement.querySelectorAll(
+      'div[class*="sl sm sn so sp l bw"], div[class*="ru rv rw rx ry rz sa sb gt ab q sc sd c"], div[class*="l m n o c"], div[class*="ab co jh ji jj jk jl jm jn jo jp jq jr js jt ju jv jw"]',
+    );
+    divsWithClass.forEach((div) => {
+      div.parentNode!.removeChild(div);
+    });
+
     // 'tempElement' contains the modified HTML without the specified elements
     const modifiedHTML = tempElement.innerHTML;
-
-    setTheme("light");
 
     setBlogContent(modifiedHTML);
   };
@@ -78,7 +82,7 @@ export default function BlogPage() {
   return (
     <div className="w-full">
       <div
-        className="max-h-5"
+        className="my-8 max-h-5"
         dangerouslySetInnerHTML={{ __html: blogContent }}
       ></div>
     </div>

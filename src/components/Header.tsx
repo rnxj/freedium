@@ -10,7 +10,7 @@ import Container from "./ui/container";
 const Header = () => {
   const { theme, setTheme } = useTheme();
   return (
-    <header className="border-b px-4 py-3 sm:flex sm:justify-between">
+    <header className="fixed left-0 top-0 z-20 flex w-full items-center justify-center border-t border-gray-200 bg-white p-2 shadow dark:border-gray-600 dark:bg-[#0c111c] dark:text-gray-400 sm:flex sm:justify-between">
       <Container>
         <div className="relative flex h-12 w-full items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex items-center">
@@ -35,7 +35,9 @@ const Header = () => {
             <MenuButton />
             <div className="mx-6 hidden items-center space-x-4 md:block lg:space-x-6">
               <Button asChild variant="ghost">
-                <Link href="https://www.buymeacoffee.com/reuelnixon">Buy me a Coffee</Link>
+                <Link href="https://www.buymeacoffee.com/reuelnixon">
+                  Buy me a Coffee
+                </Link>
               </Button>
             </div>
           </div>
