@@ -1,6 +1,7 @@
 import "~/styles/globals.css";
 
 import { Inter } from "next/font/google";
+import Footer from "~/components/Footer";
 import Header from "~/components/Header";
 import { ThemeProvider } from "~/components/ThemeProvider";
 
@@ -26,6 +27,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
