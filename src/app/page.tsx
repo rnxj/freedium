@@ -45,13 +45,12 @@ export default function Home() {
 
   return (
     <div>
-      <div className="mx-auto py-8 md:py-24">
+      <div className="mx-auto pb-10 pt-24">
         <div className="grid grid-cols-1 gap-1 text-center lg:grid-cols-5">
           <div className="z-10 ml-5 hidden lg:col-span-1 lg:block">
             <LeftHand />
           </div>
           <h1 className="z-10 max-w-full px-6 py-12 text-5xl font-extrabold tracking-tight md:px-32 lg:col-span-3 lg:px-6 lg:text-7xl">
-            {/* Say goodbye to Medium's paywall and hello to unlimited reading! */}
             Unlock the Knowledge Behind the Paywall!
           </h1>
           <div className="z-10 mr-5 hidden lg:col-span-1 lg:block">
@@ -60,7 +59,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-10">
+      <div className="mb-20 flex flex-col items-center gap-10">
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
