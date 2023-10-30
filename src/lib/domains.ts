@@ -1,6 +1,7 @@
 const domainList = [
   "https://medium.com/*",
   "https://*.medium.com/*",
+  "https://codixir.medium.com/*",
   "https://towardsaws.com/*",
   "https://towardsdatascience.com/*",
   "https://hackernoon.com/*",
